@@ -1,0 +1,301 @@
+id,name,brand,category,price,imgUrl,saleQtd
+0,Camiseta polo Nike,Nike,"Unissex, Qualquer Estação, Diurno",22.50,google.com,242
+1,Calça jeans Levi's,Levi's,"Unissex, Qualquer Estação, Diurno",18.75,google.com,416
+2,Vestido floral Zara,Zara,"Feminino, Qualquer Estação, Diurno",37.50,google.com,28
+3,Blusa de manga longa H&M,H&M,"Feminino, Qualquer Estação, Diurno",28.75,google.com,187
+4,Camisa social Ralph Lauren,Ralph Lauren,"Unissex, Qualquer Estação, Diurno/Noturno",41.25,google.com,480
+5,Saia plissada Forever 21,Forever 21,"Feminino, Qualquer Estação, Diurno",32.50,google.com,12
+6,Short de linho Gap,Gap,"Unissex, Qualquer Estação, Diurno",26.25,google.com,373
+7,Jaqueta de couro biker,Harley-Davidson,"Unissex, Qualquer Estação, Diurno/Noturno",21.25,google.com,55
+8,Casaco de lã trench coat,Burberry,"Unissex, Qualquer Estação, Diurno/Noturno",26.25,google.com,337
+9,Suéter de cashmere,Loro Piana,"Unissex, Qualquer Estação, Diurno/Noturno",33.75,google.com,162
+10,Blazer de veludo cotelê,Tom Ford,"Unissex, Qualquer Estação, Diurno/Noturno",31.25,google.com,86
+11,Colete de alfaiataria,Hugo Boss,"Unissex, Qualquer Estação, Diurno",21.25,google.com,293
+12,Legging Adidas,Adidas,"Feminino, Qualquer Estação, Diurno",17.50,google.com,195
+13,Conjunto de moletom Puma,Puma,"Unissex, Qualquer Estação, Diurno",35.00,google.com,312
+14,Macacão preto,ASOS,"Feminino, Qualquer Estação, Diurno",36.25,google.com,426
+15,Top esportivo Under Armour,Under Armour,"Feminino, Qualquer Estação, Diurno",18.75,google.com,362
+16,Bermuda cargo Timberland,Timberland,"Unissex, Qualquer Estação, Diurno",32.50,google.com,118
+17,Blusa de tricô GAP,GAP,"Feminino, Qualquer Estação, Diurno",23.75,google.com,260
+18,Cardigã básico Uniqlo,Uniqlo,"Feminino, Qualquer Estação, Diurno",20.00,google.com,37
+19,Camiseta regata masculina,Calvin Klein,"Unissex, Qualquer Estação, Diurno",17.50,google.com,123
+20,Cueca boxer,Happy Socks,"Unissex, Qualquer Estação, Diurno",33.75,google.com,453
+21,Meias estampadas,Gucci,"Unissex, Qualquer Estação, Diurno",31.25,google.com,77
+22,Cinto de couro marrom,Hermès,"Unissex, Qualquer Estação, Diurno",21.25,google.com,409
+23,Gravata borboleta preta,Borsalino,"Unissex, Qualquer Estação, Diurno",26.25,google.com,144
+24,Lenço de seda estampado,New Era,"Unissex, Qualquer Estação, Diurno",36.25,google.com,205
+25,Chapéu Fedora de feltro,Clarks,"Unissex, Qualquer Estação, Diurno",28.75,google.com,452
+26,Boné snapback,Jimmy Choo,"Unissex, Qualquer Estação, Diurno",23.75,google.com,94
+27,Luvas de couro,Nike Benassi,"Unissex, Inverno, Diurno",18.75,google.com,321
+28,Sapato Oxford,Dr. Martens,"Unissex, Qualquer Estação, Diurno",37.50,google.com,435
+29,Tênis branco,Repetto,"Unissex, Qualquer Estação, Diurno",33.75,google.com,168
+30,Sandália de salto alto,Tod's,"Feminino, Qualquer Estação, Noturno",15.00,google.com,248
+31,Chinelo slide,Fendi,"Unissex, Verão, Diurno",18.75,google.com,28
+32,Bota de couro preta,Herschel,"Unissex, Inverno, Diurno/Noturno",35.00,google.com,150
+33,Sapatilha de ballet,Bellroy,"Feminino, Qualquer Estação, Diurno",31.25,google.com,381
+34,Mocassim de camurça,Judith Leiber,"Unissex, Qualquer Estação, Diurno",15.00,google.com,91
+35,Bolsa de ombro,Chanel,"Feminino, Qualquer Estação, Diurno",25.00,google.com,230
+36,Mochila urbana,Tiffany & Co.,"Unissex, Qualquer Estação, Diurno",33.75,google.com,461
+37,Carteira de couro Slim,Kate Spade,"Unissex, Qualquer Estação, Diurno",28.75,google.com,15
+38,Clutch metalizada,David Yurman,"Feminino, Qualquer Estação, Noturno",21.25,google.com,375
+39,Presilha de cabelo com pérola,Cartier,"Feminino, Qualquer Estação, Diurno",18.75,google.com,216
+40,Brinco de argola dourada,Rolex,"Feminino, Qualquer Estação, Diurno",32.50,google.com,84
+41,Colar com pingente inicial,Ray-Ban,"Unissex, Qualquer Estação, Diurno",23.75,google.com,284
+42,Pulseira de prata,Fjällräven,"Unissex, Qualquer Estação, Diurno",20.00,google.com,61
+43,Anel de compromisso,Wood Thumb,"Unissex, Qualquer Estação, Diurno",18.75,google.com,434
+44,Relógio de pulso analógico,Etsy,"Unissex, Qualquer Estação, Diurno",30.00,google.com,171
+45,Óculos de sol aviador,Marchesa,"Unissex, Qualquer Estação, Diurno",25.00,google.com,298
+46,Lenço de seda para o pescoço,Missoni,"Unissex, Qualquer Estação, Diurno",21.25,google.com,483
+47,Touca de lã colorida,Mara Hoffman,"Unissex, Inverno, Diurno",18.75,google.com,366
+48,Gravata borboleta de madeira,Melissa Odabash,"Unissex, Qualquer Estação, Diurno",35.00,google.com,102
+49,Suspensórios vintage,UGG,"Unissex, Qualquer Estação, Diurno",30.00,google.com,246
+50,Cachecol xadrez,Amplified,"Unissex, Inverno, Diurno",22.50,google.com,65
+51,Vestido de festa longo,Urban Outfitters,"Feminino, Qualquer Estação, Noturno",27.50,google.com,417
+52,Biquíni de crochê,Schott,"Feminino, Verão, Diurno",38.75,google.com,134
+53,Maiô estampado,Diane von Furstenberg,"Feminino, Verão, Diurno",27.50,google.com,316
+54,Saída de praia em renda,AllSaints,"Feminino, Verão, Diurno",23.75,google.com,456
+55,Legging de compressão,Saint James,"Feminino, Qualquer Estação, Diurno",18.75,google.com,22
+56,Blusa de manga comprida térmica,Pronovias,"Feminino, Inverno, Diurno",35.00,google.com,378
+57,Casaco acolchoado,Champion,"Unissex, Inverno, Diurno/Noturno",32.50,google.com,117
+58,Camisola de seda,Pendleton,"Feminino, Qualquer Estação, Noturno",16.25,google.com,269
+59,Pijama de algodão,Acne Studios,"Unissex, Qualquer Estação, Noturno",18.75,google.com,438
+60,Robe aconchegante,Gucci,"Unissex, Qualquer Estação, Diurno/Noturno",35.00,google.com,2
+61,Camiseta de banda Rolling Stones,Levi's,"Unissex, Qualquer Estação, Diurno",31.25,google.com,353
+62,Camiseta estampada tie-dye,Dockers,"Unissex, Verão, Diurno",20.00,google.com,66
+63,Jaqueta de couro motociclista,Hanes,"Unissex, Qualquer Estação, Diurno/Noturno",26.25,google.com,427
+64,Blusa de seda estampada,Topshop,"Feminino, Qualquer Estação, Diurno",32.50,google.com,98
+65,Saia de couro,Hervé Léger,"Feminino, Qualquer Estação, Diurno",27.50,google.com,247
+66,Camiseta listrada Breton,Free People,"Unissex, Qualquer Estação, Diurno",21.25,google.com,52
+67,Vestido de noiva rendado,Reformation,"Feminino, Qualquer Estação, Diurno",17.50,google.com,349
+68,Calça de moletom jogger,ASOS,"Unissex, Qualquer Estação, Diurno",32.50,google.com,175
+69,Camisa xadrez flanela,American Apparel,"Unissex, Outono/Inverno, Diurno",26.25,google.com,289
+70,Suéter de lã oversized,Alpha Industries,"Unissex, Outono/Inverno, Diurno",21.25,google.com,475
+71,Blazer estampado floral,Ted Baker,"Unissex, Qualquer Estação, Diurno",25.00,google.com,10
+72,Shorts jeans desfiado,Self-Portrait,"Feminino, Verão, Diurno",35.00,google.com,329
+73,Calça chino Dockers,Billabong,"Unissex, Qualquer Estação, Diurno",31.25,google.com,80
+74,Camiseta básica branca,Moncler,"Unissex, Qualquer Estação, Diurno",20.00,google.com,352
+75,Top cropped,La Perla,"Feminino, Qualquer Estação, Diurno",23.75,google.com,184
+76,Jaqueta jeans destroyed,Calvin Klein,"Unissex, Qualquer Estação, Diurno",32.50,google.com,464
+77,Vestido tubinho preto,Urban Outfitters,"Feminino, Qualquer Estação, Diurno",30.00,google.com,120
+78,Blusa ciganinha,Off-White,"Feminino, Verão, Diurno",23.75,google.com,245
+79,Saia midi plissada,Natori,"Feminino, Qualquer Estação, Diurno",16.25,google.com,60
+80,Macacão pantacourt,Paige,"Feminino, Qualquer Estação, Diurno",32.50,google.com,418
+81,Calça de alfaiataria,Off-White,"Unissex, Qualquer Estação, Diurno",28.75,google.com,142
+82,Camiseta manga raglan,Natori,"Unissex, Qualquer Estação, Diurno",18.75,google.com,390
+83,Vestido de alças finas,Anthropologie,"Feminino, Verão, Diurno",22.50,google.com,54
+84,Shortinho jeans,Ralph Lauren,"Feminino, Verão, Diurno",37.50,google.com,268
+85,Jaqueta de couro marrom,ASOS,"Unissex, Qualquer Estação, Diurno/Noturno",26.25,google.com,491
+86,Blusa de seda com laço,Zara,"Feminino, Qualquer Estação, Diurno",18.75,google.com,17
+87,Calça cargo,Topshop,"Unissex, Qualquer Estação, Diurno",17.50,google.com,341
+88,Camiseta estampada floral,Saint James,"Unissex, Verão, Diurno",32.50,google.com,73
+89,Vestido de renda,Free People,"Feminino, Qualquer Estação, Diurno",26.25,google.com,290
+90,Saia lápis,ModCloth,"Feminino, Qualquer Estação, Diurno",21.25,google.com,35
+91,Blusa de alcinha,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",23.75,google.com,283
+92,Camisa estampada,Zara,"Unissex, Qualquer Estação, Diurno",32.50,google.com,202
+93,Calça jogger,ASOS,"Unissex, Qualquer Estação, Diurno",33.75,google.com,411
+94,Camiseta estampada de animal print,Hugo Boss,"Unissex, Qualquer Estação, Diurno",18.75,google.com,157
+95,Vestido envelope,American Apparel,"Feminino, Qualquer Estação, Diurno",17.50,google.com,406
+96,Short de alfaiataria,Champion,"Unissex, Qualquer Estação, Diurno",35.00,google.com,116
+97,Jaqueta bomber,Reclaimed Vintage,"Unissex, Qualquer Estação, Diurno",32.50,google.com,257
+98,Blusa de tricô oversized,ModCloth,"Feminino, Qualquer Estação, Diurno",21.25,google.com,48
+99,Calça skinny,ASOS,"Unissex, Qualquer Estação, Diurno",35.00,google.com,399
+100,Camisa xadrez lenhador,Zara,"Unissex, Outono/Inverno, Diurno",37.50,google.com,79
+101,Suéter de gola alta,Urban Outfitters,"Unissex, Outono/Inverno, Diurno",28.75,google.com,319
+102,Vestido de paetês,Ted Baker,"Feminino, Qualquer Estação, Noturno",20.00,google.com,43
+103,Saia assimétrica,Self-Portrait,"Feminino, Qualquer Estação, Diurno",17.50,google.com,386
+104,Top esportivo de compressão,Diane von Furstenberg,"Feminino, Qualquer Estação, Diurno",32.50,google.com,243
+105,Jaqueta corta-vento,Theory,"Unissex, Qualquer Estação, Diurno",35.00,google.com,491
+106,Blusa de seda com estampa de leopardo,Reformation,"Feminino, Qualquer Estação, Diurno",23.75,google.com,27
+107,Calça wide-leg,Urban Outfitters,"Unissex, Qualquer Estação, Diurno",23.75,google.com,434
+108,Camiseta estampada vintage,Levi's,"Unissex, Qualquer Estação, Diurno",16.26,google.com,76
+109,Vestido estampado floral,Vince,"Feminino, Qualquer Estação, Diurno",32.51,google.com,331
+110,Saia plissada metálica,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",28.76,google.com,54
+111,Short jeans cintura alta,Michael Kors,"Feminino, Verão, Diurno",18.76,google.com,309
+112,Jaqueta jeans com patches,Topshop,"Unissex, Qualquer Estação, Diurno",22.51,google.com,228
+113,Blusa de gola Peter Pan,Reformation,"Feminino, Qualquer Estação, Diurno",37.51,google.com,474
+114,Camisa jeans,Urban Outfitters,"Unissex, Qualquer Estação, Diurno",26.26,google.com,104
+115,Vestido longo estampado,Ted Baker,"Feminino, Qualquer Estação, Diurno",18.76,google.com,488
+116,Calça de couro skinny,Champion,"Unissex, Qualquer Estação, Diurno",17.51,google.com,32
+117,Camiseta com estampa gráfica,Zara,"Unissex, Qualquer Estação, Diurno",32.51,google.com,351
+118,Vestido camisola,ModCloth,"Feminino, Qualquer Estação, Noturno",26.26,google.com,161
+119,Saia de pregas,Reformation,"Feminino, Qualquer Estação, Diurno",21.26,google.com,278
+120,Blusa com detalhes em renda,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",23.76,google.com,436
+121,Camiseta com logotipo,ASOS,"Unissex, Qualquer Estação, Diurno",32.51,google.com,10
+122,Vestido chemise,Zara,"Feminino, Qualquer Estação, Diurno",33.76,google.com,367
+123,Calça jeans flare,Urban Outfitters,"Unissex, Qualquer Estação, Diurno",18.76,google.com,98
+124,Camiseta manga longa listrada,Zara,"Unissex, Qualquer Estação, Diurno",17.51,google.com,311
+125,Vestido curto estampado,Zara,"Feminino, Verão, Diurno",35.01,google.com,151
+126,Saia godê,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",32.51,google.com,463
+127,Blusa ombro a ombro,ASOS,"Feminino, Qualquer Estação, Diurno",21.26,google.com,92
+128,Camisa de linho,ModCloth,"Unissex, Qualquer Estação, Diurno",35.01,google.com,260
+129,Vestido longo de festa,Anthropologie,"Feminino, Qualquer Estação, Noturno",37.51,google.com,64
+130,Calça pantalona,ASOS,"Unissex, Qualquer Estação, Diurno",28.76,google.com,399
+131,Camiseta estampada retrô,Nike,"Unissex, Qualquer Estação, Diurno",20.01,google.com,193
+132,Vestido midi estampado,Zara,"Feminino, Qualquer Estação, Diurno",17.51,google.com,338
+133,Saia lápis de couro,ASOS,"Feminino, Qualquer Estação, Diurno",32.51,google.com,23
+134,Blusa de manga bufante,Zara,"Feminino, Qualquer Estação, Diurno",35.01,google.com,366
+135,Camiseta com mensagem,Reformation,"Unissex, Qualquer Estação, Diurno",23.75,google.com,262
+136,Vestido slip dress,Ralph Lauren,"Feminino, Qualquer Estação, Noturno",23.75,google.com,423
+137,Calça destroyed,Topshop,"Unissex, Qualquer Estação, Diurno",16.27,google.com,47
+138,Camisa social listrada,Urban Outfitters,"Unissex, Qualquer Estação, Diurno",32.52,google.com,340
+139,Vestido t-shirt,Gucci,"Feminino, Qualquer Estação, Diurno",28.77,google.com,106
+140,Saia evasê,Pendleton,"Feminino, Qualquer Estação, Diurno",18.77,google.com,281
+141,Blusa com amarração frontal,Anthropologie,"Feminino, Qualquer Estação, Diurno",22.52,google.com,15
+142,Camiseta de banda vintage,Free People,"Unissex, Qualquer Estação, Diurno",37.52,google.com,246
+143,Vestido com fenda,ModCloth,"Feminino, Qualquer Estação, Noturno",26.27,google.com,109
+144,Calça cargo jogger,Ralph Lauren,"Unissex, Qualquer Estação, Diurno",18.77,google.com,295
+145,Camisa estampada havaiana,Zara,"Unissex, Verão, Diurno",17.52,google.com,162
+146,Vestido plissado,Champion,"Feminino, Qualquer Estação, Diurno",32.52,google.com,440
+147,Saia de veludo,ASOS,"Feminino, Qualquer Estação, Diurno",26.27,google.com,21
+148,Blusa ciganinha ombro a ombro,Free People,"Feminino, Verão, Diurno",21.27,google.com,402
+149,Camiseta com estampa de banda,ModCloth,"Unissex, Qualquer Estação, Diurno",23.77,google.com,184
+150,Vestido peplum,Anthropologie,"Feminino, Qualquer Estação, Diurno",32.52,google.com,370
+151,Calça jogging,Reformation,"Unissex, Qualquer Estação, Diurno",33.77,google.com,115
+152,Camisa de manga curta,Ralph Lauren,"Unissex, Qualquer Estação, Diurno",18.77,google.com,434
+153,Vestido camponesa,Michael Kors,"Feminino, Qualquer Estação, Diurno",17.52,google.com,50
+154,Saia de pregas plissadas,Zara,"Feminino, Qualquer Estação, Diurno",35.02,google.com,380
+155,Blusa com decote ombro a ombro,Reformation,"Feminino, Qualquer Estação, Diurno",32.52,google.com,229
+156,Camiseta com estampa vintage,Urban Outfitters,"Unissex, Qualquer Estação, Diurno",21.27,google.com,492
+157,Vestido ciganinha,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",35.02,google.com,84
+158,Calça clochard,Zara,"Unissex, Qualquer Estação, Diurno",37.52,google.com,482
+159,Camisa xadrez tartan,Champion,"Unissex, Outono/Inverno, Diurno",28.77,google.com,44
+160,Vestido chemise estampado,Zara,"Feminino, Qualquer Estação, Diurno",20.02,google.com,355
+161,Saia com botões frontais,Topshop,"Feminino, Qualquer Estação, Diurno",17.52,google.com,129
+162,Blusa de manga sino,Free People,"Feminino, Qualquer Estação, Diurno",32.52,google.com,466
+163,Camiseta estampada de filme,ModCloth,"Unissex, Qualquer Estação, Diurno",35.02,google.com,170
+164,Vestido estampado étnico,Anthropologie,"Feminino, Qualquer Estação, Diurno",23.75,google.com,432
+165,Calça cenoura,ASOS,"Feminino, Qualquer Estação, Diurno",23.75,google.com,66
+166,Camisa estampada floral,ASOS,"Feminino, Qualquer Estação, Diurno",16.28,google.com,285
+167,Vestido com babados,Zara,"Unissex, Qualquer Estação, Diurno",32.53,google.com,24
+168,Saia de couro lápis,Champion,"Feminino, Qualquer Estação, Diurno",28.78,google.com,404
+169,Blusa de manga flare,Michael Kors,"Feminino, Qualquer Estação, Diurno",18.78,google.com,157
+170,Camiseta com estampa de cidade,Diane von Furstenberg,"Feminino, Qualquer Estação, Diurno",22.53,google.com,397
+171,Vestido camiseta com logotipo,Theory,"Unissex, Qualquer Estação, Diurno",37.53,google.com,120
+172,Calça cigarrete,Reformation,"Feminino, Qualquer Estação, Diurno",26.28,google.com,442
+173,Camisa de seda,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",18.78,google.com,86
+174,Vestido de tricô,ASOS,"Feminino, Qualquer Estação, Diurno",17.53,google.com,359
+175,Saia jeans,Zara,"Unissex, Qualquer Estação, Diurno",32.53,google.com,243
+176,Blusa de gola alta,Topshop,"Feminino, Verão, Diurno",26.28,google.com,489
+177,Camiseta com estampa de animal,Reformation,"Feminino, Qualquer Estação, Diurno",21.28,google.com,93
+178,Vestido longo com fenda,Anthropologie,"Feminino, Qualquer Estação, Diurno",23.78,google.com,456
+179,Calça social,Ralph Lauren,"Unissex, Verão, Diurno",32.53,google.com,52
+180,Camisa estampada tropical,ASOS,"Feminino, Qualquer Estação, Diurno",33.78,google.com,365
+181,Vestido tubinho,Zara,"Feminino, Qualquer Estação, Diurno",18.78,google.com,131
+182,Saia lápis estampada,Champion,"Feminino, Qualquer Estação, Diurno",17.53,google.com,324
+183,Blusa com detalhes em renda,ASOS,"Unissex, Qualquer Estação, Diurno",35.03,google.com,11
+184,Camiseta com estampa gráfica,Zara,"Feminino, Verão, Diurno",32.53,google.com,422
+185,Vestido envelope,Ralph Lauren,"Feminino, Qualquer Estação, Noturno",21.28,google.com,80
+186,Calça de alfaiataria,Zara,"Feminino, Qualquer Estação, Diurno",35.03,google.com,297
+187,Camisa xadrez lenhador,Reformation,"Unissex, Qualquer Estação, Diurno",37.53,google.com,137
+188,Vestido de paetês,ModCloth,"Feminino, Qualquer Estação, Diurno",28.78,google.com,471
+189,Saia assimétrica,Saint James,"Feminino, Qualquer Estação, Diurno",20.03,google.com,20
+190,Blusa de tricô oversized,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",17.53,google.com,411
+191,Camiseta de manga raglan,ASOS,"Unissex, Qualquer Estação, Diurno",32.53,google.com,104
+192,Vestido estampado floral,Zara,"Feminino, Verão, Diurno",35.03,google.com,349
+193,Saia plissada metálica,ASOS,"Feminino, Qualquer Estação, Diurno",23.75,google.com,196
+194,Blusa com decote ombro a ombro,Zara,"Feminino, Verão, Diurno",23.75,google.com,445
+195,Camisa estampada de animal print,Champion,"Unissex, Qualquer Estação, Diurno",16.29,google.com,33
+196,Vestido de renda,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",32.54,google.com,399
+197,Saia lápis,Zara,"Feminino, Verão, Diurno",28.79,google.com,215
+198,Blusa de alcinha,ModCloth,"Feminino, Qualquer Estação, Diurno",18.79,google.com,490
+199,Camisa estampada,Reformation,"Unissex, Qualquer Estação, Diurno",22.54,google.com,65
+200,Vestido tubinho preto,Urban Outfitters,"Feminino, Qualquer Estação, Diurno",37.54,google.com,477
+201,Saia plissada midi,Zara,"Feminino, Qualquer Estação, Diurno",26.29,google.com,32
+202,Blusa ombro a ombro,Champion,"Feminino, Qualquer Estação, Diurno",18.79,google.com,336
+203,Camiseta de banda Rolling Stones,Zara,"Unissex, Qualquer Estação, Diurno",17.54,google.com,110
+204,Vestido slip dress,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",32.54,google.com,303
+205,Saia de pregas,Topshop,"Feminino, Qualquer Estação, Diurno",26.29,google.com,7
+206,Blusa ciganinha,ModCloth,"Feminino, Qualquer Estação, Diurno",21.29,google.com,429
+207,Camisa jeans,ASOS,"Unissex, Qualquer Estação, Diurno",23.79,google.com,53
+208,Vestido longo estampado,Diane von Furstenberg,"Feminino, Qualquer Estação, Noturno",32.54,google.com,382
+209,Saia godê,Free People,"Feminino, Qualquer Estação, Diurno",33.79,google.com,138
+210,Blusa com detalhes em renda,Anthropologie,"Feminino, Qualquer Estação, Diurno",18.79,google.com,280
+211,Camiseta com logotipo,Zara,"Unissex, Qualquer Estação, Diurno",17.54,google.com,97
+212,Vestido chemise,Gucci,"Feminino, Qualquer Estação, Diurno",35.04,google.com,445
+213,Saia midi de couro,Levi's,"Feminino, Qualquer Estação, Diurno",32.54,google.com,123
+214,Blusa de manga bufante,Urban Outfitters,"Feminino, Qualquer Estação, Diurno",21.29,google.com,429
+215,Camisa social,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",35.04,google.com,193
+216,Vestido longo de festa,Reformation,"Feminino, Noturno, Qualquer Estação",37.54,google.com,357
+217,Saia lápis de couro,ASOS,"Feminino, Qualquer Estação, Diurno",28.79,google.com,3
+218,Blusa ciganinha ombro a ombro,ModCloth,"Feminino, Verão, Diurno",20.04,google.com,387
+219,Camiseta com estampa de banda,Topshop,"Unissex, Qualquer Estação, Diurno",17.54,google.com,79
+220,Vestido com fenda,Zara,"Feminino, Noturno, Qualquer Estação",32.54,google.com,295
+221,Saia evasê,Reformation,"Feminino, Qualquer Estação, Diurno",35.04,google.com,112
+222,Blusa com amarração frontal,ASOS,"Feminino, Verão, Diurno",23.75,google.com,449
+223,Camisa xadrez flanela,Ralph Lauren,"Unissex, Outono/Inverno, Diurno",23.75,google.com,62
+224,Vestido t-shirt,Michael Kors,"Unissex, Qualquer Estação, Diurno",16.30,google.com,379
+225,Saia plissada,Zara,"Feminino, Qualquer Estação, Diurno",32.55,google.com,226
+226,Blusa manga longa listrada,Theory,"Unissex, Qualquer Estação, Diurno",28.80,google.com,480
+227,Camisa estampada havaiana,ASOS,"Unissex, Verão, Diurno",18.80,google.com,73
+228,Vestido peplum,Zara,"Feminino, Qualquer Estação, Diurno",22.55,google.com,465
+229,Saia de veludo,Champion,"Feminino, Outono/Inverno, Diurno",37.55,google.com,8
+230,Blusa ciganinha,Gucci,"Feminino, Verão, Diurno",26.30,google.com,347
+231,Camiseta de banda vintage,ASOS,"Unissex, Qualquer Estação, Diurno",18.80,google.com,175
+232,Vestido slip dress,Zara,"Feminino, Noturno, Qualquer Estação",17.55,google.com,398
+233,Saia de pregas plissadas,Urban Outfitters,"Feminino, Qualquer Estação, Diurno",32.55,google.com,22
+234,Blusa com decote ombro a ombro,ModCloth,"Feminino, Verão, Diurno",26.30,google.com,402
+235,Camisa de manga curta,Ralph Lauren,"Unissex, Qualquer Estação, Diurno",21.30,google.com,143
+236,Vestido camponesa,Anthropologie,"Feminino, Verão, Diurno",23.80,google.com,408
+237,Saia com botões frontais,ASOS,"Feminino, Qualquer Estação, Diurno",32.55,google.com,92
+238,Blusa de manga sino,Zara,"Feminino, Qualquer Estação, Diurno",33.80,google.com,490
+239,Camiseta com estampa vintage,Reformation,"Unissex, Qualquer Estação, Diurno",18.80,google.com,68
+240,Vestido ciganinha,Champion,"Feminino, Verão, Diurno",17.55,google.com,465
+241,Saia jeans,Topshop,"Feminino, Qualquer Estação, Diurno",35.05,google.com,139
+242,Blusa de gola alta,ModCloth,"Unissex, Qualquer Estação, Diurno",32.55,google.com,394
+243,Camisa xadrez tartan,Ralph Lauren,"Unissex, Outono/Inverno, Diurno",21.30,google.com,157
+244,Vestido chemise estampado,ASOS,"Feminino, Qualquer Estação, Diurno",35.05,google.com,433
+245,Saia com babados,Zara,"Feminino, Qualquer Estação, Diurno",37.55,google.com,41
+246,Blusa de manga flare,Urban Outfitters,"Feminino, Qualquer Estação, Diurno",28.80,google.com,370
+247,Camiseta estampada de filme,Reformation,"Unissex, Qualquer Estação, Diurno",20.05,google.com,189
+248,Vestido estampado étnico,Michael Kors,"Feminino, Qualquer Estação, Diurno",17.55,google.com,487
+249,Saia lápis,Diane von Furstenberg,"Feminino, Qualquer Estação, Diurno",32.55,google.com,15
+250,Blusa de alça fina,Ted Baker,"Feminino, Verão, Diurno",35.05,google.com,418
+251,Camiseta com estampa de cidade,Urban Outfitters,"Unissex, Qualquer Estação, Diurno",23.75,google.com,63
+252,Vestido camiseta com logotipo,Zara,"Unissex, Qualquer Estação, Diurno",23.75,google.com,374
+253,Saia plissada,Zara,"Feminino, Qualquer Estação, Diurno",16.31,google.com,124
+254,Blusa com decote V,Ralph Lauren,"Feminino, Verão, Diurno",32.56,google.com,457
+255,Camisa estampada geométrica,Reformation,"Unissex, Qualquer Estação, Diurno",28.81,google.com,9
+256,Vestido com estampa animal,Anthropologie,"Feminino, Qualquer Estação, Diurno",18.81,google.com,344
+257,Saia com fenda,Champion,"Feminino, Qualquer Estação, Diurno",22.56,google.com,93
+258,Blusa com recortes,Zara,"Feminino, Verão, Diurno",37.56,google.com,407
+259,Camiseta com estampa de paisagem,Free People,"Unissex, Qualquer Estação, Diurno",26.31,google.com,166
+260,Vestido curto estampado,ASOS,"Feminino, Qualquer Estação, Diurno",18.81,google.com,428
+261,Saia com botões laterais,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",17.56,google.com,20
+262,Blusa de manga comprida estampada,Urban Outfitters,"Feminino, Qualquer Estação, Diurno",32.56,google.com,440
+263,Camiseta de marca de surf,Zara,"Unissex, Qualquer Estação, Diurno",26.31,google.com,108
+264,Vestido drapeado,Reformation,"Feminino, Noturno, Qualquer Estação",21.31,google.com,391
+265,Saia midi plissada,Michael Kors,"Feminino, Qualquer Estação, Diurno",23.81,google.com,67
+266,Blusa ombro único,ModCloth,"Feminino, Verão, Diurno",32.56,google.com,409
+267,Camisa estampada abstrata,Ted Baker,"Unissex, Qualquer Estação, Diurno",33.81,google.com,55
+268,Vestido boho,Ralph Lauren,"Feminino, Verão, Diurno",18.81,google.com,386
+269,Saia de paetês,Zara,"Feminino, Noturno, Qualquer Estação",17.56,google.com,215
+270,Blusa de renda,Champion,"Feminino, Qualquer Estação, Diurno",35.06,google.com,487
+271,Camiseta esportiva,ASOS,"Unissex, Qualquer Estação, Diurno",32.56,google.com,4
+272,Vestido com estampa de listras,Zara,"Feminino, Qualquer Estação, Diurno",21.31,google.com,329
+273,Saia lápis de cintura alta,Urban Outfitters,"Feminino, Qualquer Estação, Diurno",35.06,google.com,75
+274,Blusa cropped,Michael Kors,"Feminino, Qualquer Estação, Diurno",37.56,google.com,308
+275,Camisa listrada,Reformation,"Unissex, Qualquer Estação, Diurno",28.81,google.com,126
+276,Vestido longo de verão,Anthropologie,"Feminino, Verão, Diurno",20.06,google.com,489
+277,Saia de tule,Ralph Lauren,"Feminino, Verão, Diurno",17.56,google.com,25
+278,Blusa com estampa de frutas,Champion,"Feminino, Verão, Diurno",32.56,google.com,400
+279,Camiseta estampada de comida,Zara,"Unissex, Qualquer Estação, Diurno",35.06,google.com,131
+280,Vestido com babados,Topshop,"Feminino, Verão, Diurno",23.75,google.com,363
+281,Saia com estampa tropical,Urban Outfitters,"Feminino, Verão, Diurno",23.75,google.com,85
+282,Blusa com laço no pescoço,Reformation,"Feminino, Verão, Diurno",16.32,google.com,408
+283,Camisa estampada de animais,Michael Kors,"Unissex, Qualquer Estação, Diurno",32.57,google.com,52
+284,Vestido de veludo,ASOS,"Feminino, Outono/Inverno, Noturno",28.82,google.com,361
+285,Saia plissada dourada,Zara,"Feminino, Qualquer Estação, Diurno",18.82,google.com,162
+286,Blusa com estampa étnica,Champion,"Feminino, Qualquer Estação, Diurno",22.57,google.com,472
+287,Camiseta com desenho animado,Ted Baker,"Unissex, Qualquer Estação, Diurno",37.57,google.com,33
+288,Vestido com mangas bufantes,ASOS,"Feminino, Qualquer Estação, Diurno",26.32,google.com,480
+289,Saia midi de renda,Zara,"Feminino, Qualquer Estação, Diurno",18.82,google.com,120
+290,Blusa com ombros vazados,Reformation,"Feminino, Verão, Diurno",17.57,google.com,443
+291,Camisa de linho estampada,Ralph Lauren,"Unissex, Qualquer Estação, Diurno",32.57,google.com,14
+292,Vestido de paetês prateados,Urban Outfitters,"Feminino, Noturno, Qualquer Estação",26.32,google.com,455
+293,Saia jeans destroyed,ASOS,"Feminino, Qualquer Estação, Diurno",21.32,google.com,105
+294,Blusa com amarração na cintura,Zara,"Feminino, Verão, Diurno",23.82,google.com,384
+295,Camiseta estampada abstrata,Champion,"Unissex, Qualquer Estação, Diurno",32.57,google.com,225
+296,Vestido de alça grossa,Zara,"Feminino, Verão, Diurno",33.82,google.com,496
+297,Saia longa estampada,Ralph Lauren,"Feminino, Qualquer Estação, Diurno",18.82,google.com,38
+298,Blusa com bordados,Anthropologie,"Feminino, Qualquer Estação, Diurno",17.57,google.com,328
+299,Camisa de manga sino,Reformation,"Feminino, Qualquer Estação, Diurno",35.07,google.com,74
