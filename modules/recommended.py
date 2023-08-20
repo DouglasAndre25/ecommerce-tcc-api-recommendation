@@ -1,26 +1,14 @@
 import csv
 import pandas as pd
-from flask import Response
+from flask import Response, json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
-def get_query(category, param):
-    querys = {
-        'gender': f"SELECT id, name, brand, category, price, \"imgUrl\", \"saleQtd\" FROM \"product\" WHERE \"category\" LIKE '{param}%' ORDER BY \"saleQtd\" DESC;",
-        'seasonOrDayTime': f"SELECT id, name, brand, category, price, \"imgUrl\", \"saleQtd\" FROM \"product\" WHERE \"category\" LIKE '%{param}%' ORDER BY \"saleQtd\" DESC;",
-    }
-
-    return querys[category]
-
-def get_recommendations(connection, user_id, category, param):
+def set_products_csv(connection):
     with connection:
         with connection.cursor() as cursor:
-            cursor.execute(f"SELECT p.name, p.brand FROM \"productHistory\" ph INNER JOIN product p ON p.id = ph.product_id INNER JOIN \"user\" u ON u.id = ph.user_id WHERE \"user_id\" = {user_id};")
-            user_history_data = cursor.fetchall()
-            cursor.execute(get_query(category, param))
+            cursor.execute("SELECT id, name, brand, category, price, \"imgUrl\", \"saleQtd\" FROM \"product\" ORDER BY \"saleQtd\" DESC;")
             products = cursor.fetchall()
-            # Transformar os dados em listas de dicionários
-            user_history = [f"{item[0]} {item[1]}" for item in user_history_data]
             products_data = [{
                 "productId": product[0],
                 "name": f"{product[1]}",
@@ -41,6 +29,23 @@ def get_recommendations(connection, user_id, category, param):
                 for row, product in enumerate(products_data):
                     # Dividindo a string em colunas separadas
                     csv_writer.writerow([row, product['name'], product['brand'], product['category'], product['price'], product['imgUrl'], product['saleQtd'], product['productId']])
+
+def get_query(category, param, ids):
+    querys = {
+        'gender': f"SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id WHERE category LIKE '{param}%' ORDER BY t.ord LIMIT 20;",
+        'seasonOrDayTime': f"SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id WHERE category LIKE '{param}%' ORDER BY t.ord LIMIT 20;",
+    }
+
+    return querys[category]
+
+
+def get_recommendations(connection, user_id, category, param):
+    with connection:
+        with connection.cursor() as cursor:
+            cursor.execute(f"SELECT p.name, p.brand FROM \"productHistory\" ph INNER JOIN product p ON p.id = ph.product_id INNER JOIN \"user\" u ON u.id = ph.user_id WHERE \"user_id\" = {user_id} LIMIT 20;")
+            user_history_data = cursor.fetchall()
+            # Transformar os dados em listas de dicionários
+            user_history = [f"{item[0]} {item[1]}" for item in user_history_data]
 
     data = pd.read_csv('products.csv')
 
@@ -65,7 +70,16 @@ def get_recommendations(connection, user_id, category, param):
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = [score for score in sim_scores if score[0] not in user_product_indices]  # Excluir produtos do histórico
 
-    recommended_indices = [i[0] for i in sim_scores][:10]  # Recomendar os 10 produtos mais similares
-    recommendations = data[['name', 'brand', 'category', 'price', 'imgUrl', 'saleQtd']].iloc[recommended_indices]
+    recommended_indices = [i[0] for i in sim_scores] # Recomendar os 10 produtos mais similares
 
-    return Response(recommendations.to_json(orient="records"), mimetype='application/json')
+    recommendations = data[['productId']].iloc[recommended_indices]
+    recommendations_id = [i[0] for i in recommendations.to_numpy()]
+    recomendations_query = get_query(category, param, ', '.join(str(id) for id in recommendations_id))
+
+    with connection.cursor() as cursor:
+        cursor.execute(recomendations_query)
+        recommendations_data = cursor.fetchall()
+        recommendations = [{'id': row[0], 'name': row[1], 'brand': row[2], 'category': row[3], 'price': row[4], 'imgUrl': row[5], 'saleQtd': row[6], 'description': row[7]} for row in recommendations_data]
+
+    print(recommendations_id[:10])
+    return Response(json.dumps(recommendations), mimetype='application/json')
