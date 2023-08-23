@@ -33,7 +33,14 @@ def set_products_csv(connection):
 def get_query(category, param, ids):
     querys = {
         'gender': f"SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id WHERE category LIKE '{param}%' ORDER BY t.ord LIMIT 20;",
-        'seasonOrDayTime': f"SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id WHERE category LIKE '{param}%' ORDER BY t.ord LIMIT 20;",
+        'seasonOrDayTime': f"SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id WHERE category LIKE '%{param}%' ORDER BY t.ord LIMIT 20;",
+        'region': f"""SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id
+                    JOIN "productBag" ph ON ph."product_id" = p.id
+                    JOIN "bag" b ON b."id" = ph."bag_id"
+                    JOIN "user" u ON u."id" = b."user_id"
+                    JOIN "address" ad ON ad."user_id" = u."id"
+                    WHERE b."completedPurchase" = True AND ad."state" = '{param}'
+                    ORDER BY t.ord LIMIT 20;"""
     }
 
     return querys[category]
@@ -42,7 +49,7 @@ def get_query(category, param, ids):
 def get_recommendations(connection, user_id, category, param):
     with connection:
         with connection.cursor() as cursor:
-            cursor.execute(f"SELECT p.name, p.brand FROM \"productHistory\" ph INNER JOIN product p ON p.id = ph.product_id INNER JOIN \"user\" u ON u.id = ph.user_id WHERE \"user_id\" = {user_id} LIMIT 20;")
+            cursor.execute(f"SELECT p.name, p.brand FROM \"productHistory\" ph INNER JOIN product p ON p.id = ph.product_id INNER JOIN \"user\" u ON u.id = ph.user_id WHERE \"user_id\" = {user_id} ORDER BY ph.\"updatedAt\" DESC LIMIT 20;")
             user_history_data = cursor.fetchall()
             # Transformar os dados em listas de dicionários
             user_history = [f"{item[0]} {item[1]}" for item in user_history_data]
@@ -79,7 +86,6 @@ def get_recommendations(connection, user_id, category, param):
     with connection.cursor() as cursor:
         cursor.execute(recomendations_query)
         recommendations_data = cursor.fetchall()
-        recommendations = [{'id': row[0], 'name': row[1], 'brand': row[2], 'category': row[3], 'price': row[4], 'imgUrl': row[5], 'saleQtd': row[6], 'description': row[7]} for row in recommendations_data]
+        recommendations = [{'id': row[0], 'name': row[1], 'brand': row[2], 'category': row[3], 'price': row[4], 'imgUrl': row[5], 'saleQtd': row[6], 'description': row[7] } for row in recommendations_data]
 
-    print(recommendations_id[:10])
     return Response(json.dumps(recommendations), mimetype='application/json')
