@@ -34,13 +34,33 @@ def get_query(category, param, ids):
     querys = {
         'gender': f"SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id WHERE category LIKE '{param}%' ORDER BY t.ord LIMIT 20;",
         'seasonOrDayTime': f"SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id WHERE category LIKE '%{param}%' ORDER BY t.ord LIMIT 20;",
-        'region': f"""SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id
+        'region': f"""
+            WITH avg_saleqtd AS (
+                SELECT AVG(p."saleQtd") AS avg_saleqtd
+                FROM product p
+            )
+            SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id
                     JOIN "productBag" ph ON ph."product_id" = p.id
                     JOIN "bag" b ON b."id" = ph."bag_id"
                     JOIN "user" u ON u."id" = b."user_id"
                     JOIN "address" ad ON ad."user_id" = u."id"
+                    JOIN avg_saleqtd avgq ON p."saleQtd" > avgq.avg_saleqtd
                     WHERE b."completedPurchase" = True AND ad."state" = '{param}'
-                    ORDER BY t.ord LIMIT 20;"""
+                    ORDER BY t.ord LIMIT 20;""",
+        'age': f"""
+            WITH avg_saleqtd AS (
+                SELECT AVG(p."saleQtd") AS avg_saleqtd
+                FROM product p
+            )
+            SELECT p.* FROM product p JOIN unnest(ARRAY[{ids}]) WITH ORDINALITY t(id, ord) ON p.id = t.id
+                    JOIN "productBag" ph ON ph."product_id" = p.id
+                    JOIN "bag" b ON b."id" = ph."bag_id"
+                    JOIN "user" u ON u."id" = b."user_id"
+                    JOIN "address" ad ON ad."user_id" = u."id"
+                    JOIN avg_saleqtd avgq ON p."saleQtd" > avgq.avg_saleqtd
+                    WHERE b."completedPurchase" = True AND EXTRACT(YEAR FROM u."birthday") > {list(map(int, param.split("-")))[0]} AND EXTRACT(YEAR FROM u."birthday") < {list(map(int, param.split("-")))[1]}
+                    ORDER BY t.ord LIMIT 20;
+        """
     }
 
     return querys[category]
@@ -70,6 +90,7 @@ def get_recommendations(connection, user_id, category, param):
         if not matching_rows.empty:
             user_product_indices.append(matching_rows['id'].values[0])
 
+    # Passo 4: Calcula a similaridade conforme o histórico do usuário
     sim_scores = []
     for index in user_product_indices:
         sim_scores.extend(list(enumerate(cosine_sim[index])))
@@ -77,12 +98,14 @@ def get_recommendations(connection, user_id, category, param):
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = [score for score in sim_scores if score[0] not in user_product_indices]  # Excluir produtos do histórico
 
-    recommended_indices = [i[0] for i in sim_scores] # Recomendar os 10 produtos mais similares
+    recommended_indices = [i[0] for i in sim_scores] # Recomendar os produtos mais similares
 
+    # Passo 5: Pega os ids do produto e pega a query do banco de dados conforme os parametros da url
     recommendations = data[['productId']].iloc[recommended_indices]
     recommendations_id = [i[0] for i in recommendations.to_numpy()]
     recomendations_query = get_query(category, param, ', '.join(str(id) for id in recommendations_id))
 
+    # Passo 6: Executa a query no banco de dados
     with connection.cursor() as cursor:
         cursor.execute(recomendations_query)
         recommendations_data = cursor.fetchall()
