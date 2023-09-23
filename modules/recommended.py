@@ -58,7 +58,7 @@ def get_query(category, param, ids):
                     JOIN "user" u ON u."id" = b."user_id"
                     JOIN "address" ad ON ad."user_id" = u."id"
                     JOIN avg_saleqtd avgq ON p."saleQtd" > avgq.avg_saleqtd
-                    WHERE b."completedPurchase" = True AND EXTRACT(YEAR FROM u."birthday") > {list(map(int, param.split("-")))[0]} AND EXTRACT(YEAR FROM u."birthday") < {list(map(int, param.split("-")))[1]}
+                    WHERE b."completedPurchase" = True AND EXTRACT(YEAR FROM u."birthday") > {list(map(int, param.split("-")))[0] if category == 'age' else ''} AND EXTRACT(YEAR FROM u."birthday") < {list(map(int, param.split("-")))[1] if category == 'age' else ''}
                     ORDER BY t.ord LIMIT 20;
         """
     }
@@ -71,6 +71,8 @@ def get_recommendations(connection, user_id, category, param):
         with connection.cursor() as cursor:
             cursor.execute(f"SELECT p.name, p.brand FROM \"productHistory\" ph INNER JOIN product p ON p.id = ph.product_id INNER JOIN \"user\" u ON u.id = ph.user_id WHERE \"user_id\" = {user_id} ORDER BY ph.\"updatedAt\" DESC LIMIT 20;")
             user_history_data = cursor.fetchall()
+            if len(user_history_data) <= 0:
+                return Response(json.dumps([]), mimetype='application/json')
             # Transformar os dados em listas de dicionários
             user_history = [f"{item[0]} {item[1]}" for item in user_history_data]
 
