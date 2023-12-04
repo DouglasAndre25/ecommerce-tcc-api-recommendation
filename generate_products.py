@@ -1,25 +1,33 @@
 import random
+import pandas as pd
 import faker
+import ast
 
-# Cria uma instância do gerador de dados fictícios
+# Arquivo de produtos
+arquivo_csv = 'flipkart_com-ecommerce_sample.csv'
+
+# Leitura dos dados
 fake = faker.Faker()
+df = pd.read_csv(arquivo_csv)
 
 # Lista de categorias de produtos
 categories = ['female', 'male', 'unissex']
 seasons = ['spring', 'summer', 'fall', 'winter']
 times = ['day', 'night']
 
-# Gera 10.000 produtos
-num_products = 10000
 products = []
 
-for _ in range(num_products):
+for index, row in df.iterrows():
+    image_urls_str = row['image']
+    image_urls = ast.literal_eval(image_urls_str) if isinstance(image_urls_str, str) else []
+    first_image_url = image_urls[0] if len(image_urls) > 0 else ""
+    
     product = {
-        "name": fake.word().capitalize(),
-        "brand": fake.company(),
+        "name": str(row['product_name']).replace("'", "").replace('"', ''),
+        "brand": str(row['brand']).replace("'", "").replace('"', ''),
         "category": f"{random.choice(categories)}, {random.choice(seasons)}, {random.choice(times)}",
-        "price": round(random.uniform(10, 200), 2),
-        "imgUrl": fake.image_url(),
+        "price": row['retail_price'],
+        "imgUrl": first_image_url,
         "saleQtd": random.randint(0, 500),
         "description": fake.paragraph(),
     }

@@ -3,6 +3,7 @@ import pandas as pd
 from flask import Response, json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
+from collections import OrderedDict
 
 def set_products_csv(connection):
     with connection:
@@ -58,7 +59,9 @@ def get_query(category, param, ids):
                     JOIN "user" u ON u."id" = b."user_id"
                     JOIN "address" ad ON ad."user_id" = u."id"
                     JOIN avg_saleqtd avgq ON p."saleQtd" > avgq.avg_saleqtd
-                    WHERE b."completedPurchase" = True AND EXTRACT(YEAR FROM u."birthday") > {list(map(int, param.split("-")))[0] if category == 'age' else ''} AND EXTRACT(YEAR FROM u."birthday") < {list(map(int, param.split("-")))[1] if category == 'age' else ''}
+                    WHERE b."completedPurchase" = True AND EXTRACT(YEAR FROM u."birthday") > 
+                    {list(map(int, param.split("-")))[0] if category == 'age' else ''} 
+                    AND EXTRACT(YEAR FROM u."birthday") < {list(map(int, param.split("-")))[1] if category == 'age' else ''}
                     ORDER BY t.ord LIMIT 20;
         """
     }
@@ -105,12 +108,18 @@ def get_recommendations(connection, user_id, category, param):
     # Passo 5: Pega os ids do produto e pega a query do banco de dados conforme os parametros da url
     recommendations = data[['productId']].iloc[recommended_indices]
     recommendations_id = [i[0] for i in recommendations.to_numpy()]
-    recomendations_query = get_query(category, param, ', '.join(str(id) for id in recommendations_id))
+    recommendations_id = list(OrderedDict.fromkeys(recommendations_id))
+    ids = ', '.join(str(id) for id in recommendations_id)
 
-    # Passo 6: Executa a query no banco de dados
-    with connection.cursor() as cursor:
-        cursor.execute(recomendations_query)
-        recommendations_data = cursor.fetchall()
-        recommendations = [{'id': row[0], 'name': row[1], 'brand': row[2], 'category': row[3], 'price': row[4], 'imgUrl': row[5], 'saleQtd': row[6], 'description': row[7] } for row in recommendations_data]
+    if ids:
+        recomendations_query = get_query(category, param, ids)
 
-    return Response(json.dumps(recommendations), mimetype='application/json')
+        # Passo 6: Executa a query no banco de dados
+        with connection.cursor() as cursor:
+            cursor.execute(recomendations_query)
+            recommendations_data = cursor.fetchall()
+            recommendations = [{'id': row[0], 'name': row[1], 'brand': row[2], 'category': row[3], 'price': row[4], 'imgUrl': row[5], 'saleQtd': row[6], 'description': row[7] } for row in recommendations_data]
+
+        return Response(json.dumps(recommendations), mimetype='application/json')
+    else:
+        return Response(json.dumps([]), mimetype='application/json')
